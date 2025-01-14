@@ -57,12 +57,6 @@ h3 {
     font-weight: 1000;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .yellow {
     background-color: yellow;
     width: 200px;
@@ -75,17 +69,25 @@ h3 {
     height: 50px;
 }
 
+.nav-section,
 .about-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* About me */
-.about-container {
+.nav-container  /* Nav container */
+{
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+    width: 1200px;
+}
+
+.about-container /* About me */
+{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
 }
 
 /* Justify abouit me description */

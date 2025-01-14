@@ -70,7 +70,8 @@ h3 {
 }
 
 .nav-section,
-.about-section {
+.about-section,
+.portfolio-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,11 +84,23 @@ h3 {
     width: 1200px;
 }
 
+.nav-container div > a /* Nav anchors */
+{
+    margin-left: 5px;
+}
+
 .about-container /* About me */
 {
     display: flex;
     justify-content: space-between;
     width: 800px;
+}
+
+.portfolio-container /* About me */
+{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
 }
 
 /* Justify abouit me description */
@@ -127,27 +140,25 @@ h3 {
 
 /* Portfolio box */
 .portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
     padding: 24px;
     border-radius: 25px;
-    margin: 12px;
-    background-color: #AAB99A;
+    background-color: #92a083;
     max-width: 300px;
+    margin: 10px;
 }
 
-/* Portfolio items */
-.portfolio > div {
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-/* Justify portfolio h3 */
-.portfolio > div > h3 {
-    text-align: justify;
+.portfolio > div > p {
+    margin-top: 8px;
 }
 
 /* Portfolio item skills, needs a gap for each skill */
 .portfolio-skills {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
@@ -171,8 +182,8 @@ h3 {
 }
 
 /* Sections */
-.about-section > h2,         /* About me section */
-.portfolio-section > h2,     /* Portfolio section */
+.about-section > div > h2,         /* About me section */
+.portfolio-section > div > h2,     /* Portfolio section */
 .skills-section > h2,        /* Portfolio section */
 .contact-section > h2 {      /* Contact section */
     text-align: center;

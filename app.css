@@ -107,6 +107,13 @@ h3 {
     text-align: center;
 }
 
+/* Contact container */
+.contact-container > p,     
+.contact-container > div     
+{
+    margin-bottom: 10px;
+}
+
 /* Skills container */
 .skills-container {
     gap: 100px;

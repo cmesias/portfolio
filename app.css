@@ -16,13 +16,13 @@
 
 body {
     background-color: #727D73;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     color: #F0F0D7;
 }
 
 .main-container {
-    width: 100%;
+    /* width: 100%; */
 }
 
 a {
@@ -38,7 +38,7 @@ nav {
 }
 
 header, main, footer {
-    width: 100%;
+    /* width: 100%; */
 }
 
 main {
@@ -55,12 +55,41 @@ h3 {
     align-items: center;
 }
 
+.yellow {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
+
+.red {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* About me */
 .about-container {
     display: flex;
-    justify-content: center;
-    gap: 100px;
+    justify-content: space-between;
+    width: 1000px;
 }
+
+/* To Do:
+    About me section is the only one that is centered properly
+    and the divs inside of that are also set to space between
+    with a width.
+
+    Portfolio, Skills and Contact need to follow this same format
+
+
+
+*/
 
 /* Justify abouit me description */
 .about-description {
@@ -132,7 +161,6 @@ h3 {
 .skills-section,        /* Portfolio section */
 .contact-section {      /* Contact section */
     background-color: #727D73;
-    width: 100%;
     padding: 32px;
 }
 

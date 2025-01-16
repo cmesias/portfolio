@@ -1,19 +1,11 @@
 
 /*
  * Color Pallete
- * #727D73 - Main background color
- * AAB99A  - Portfolio box background color
- * D0DDD0 - Portfolio box border color
- * F0F0D7 - Text color
+ * #727D73  - Background color 1
+ * AAB99A   - Background color 2 (lighter)
+ * D0DDD0   - 
+ * F0F0D7   - Text color
  */
-
-/* To Do:
-    About me section is the only one that is centered properly
-    and the divs inside of that are also set to space between
-    with a width.
-
-    Portfolio, Skills and Contact need to follow this same format
-*/
 
 * {
     margin: 0;
@@ -22,15 +14,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: #727D73;
-    /* display: flex; */
-    /* justify-content: center; */
-    color: #F0F0D7;
+html {
+    scroll-behavior: smooth;
 }
 
-.main-container {
-    /* width: 100%; */
+body {
+    background-color: #727D73;
+    color: #F0F0D7;
 }
 
 a {
@@ -39,14 +29,21 @@ a {
     color: #F0F0D7;
 }
 
-nav {
-    border-radius: 10px;
-    padding: 32px;
-    border-bottom: black 1px solid;
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: #D0DDD0;
 }
 
-header, main, footer {
-    /* width: 100%; */
+nav {
+    border-radius: 10px;
+    border-bottom: black 1px solid;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.logo {
+    color: #D0DDD0;
+    font-size: 1.5rem;
 }
 
 main {
@@ -55,163 +52,168 @@ main {
 
 h3 {
     font-weight: 1000;
+    margin-bottom: 5px;
 }
 
-.yellow {
-    background-color: yellow;
-    width: 200px;
-    height: 200px;
+/* Section headers */
+h2 {
+    font-weight: 900;
+    font-size: 11rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #D0DDD0;
 }
 
-.red {
-    background-color: red;
-    width: 50px;
-    height: 50px;
+header {
+    position: sticky;
+    top: 0;
 }
 
-.nav-section,
-.about-section,
-.portfolio-section {
+/* Section container */
+section.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #727D73;
+    padding: 32px;
+    height: 100vh;
 }
 
-.nav-container  /* Nav container */
-{
-    display: flex;
-    justify-content: space-between;
+/* Section container (override height for nav section) */
+section.nav {
+    height: 100px;
+}
+
+/* Background colors for each section */
+section.portfolio {
+    background-color: #92a083;
+}
+
+section.skills {
+    background-color: #727D73;
+}
+
+section.contact {
+    background-color: #92a083;
+}
+
+/* Section titles (h2) */
+.container > div {
+    text-align: center;
     width: 1200px;
 }
 
-.nav-container div > a /* Nav anchors */
+/* Nav container */
+.nav-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+ /* Nav anchors */
+.nav-container div > a
 {
     margin-left: 5px;
 }
 
-.about-container /* About me */
-{
+/* About container */
+.about-container {
     display: flex;
     justify-content: space-between;
-    width: 800px;
-}
-
-.portfolio-container /* About me */
-{
-    display: flex;
-    justify-content: space-between;
-    width: 1200px;
-}
-
-/* Justify abouit me description */
-.about-description {
-    text-align: justify;
-}
-
-/* Center these containers */
-.portfolio-container,  /* Portfolio container */
-.skills-container     /* Skills container */
-{
-    display: flex;
-    justify-content: center;
-}
-
-/* Contact container */
-.contact-container     
-{
-    text-align: center;
-}
-
-/* Contact container */
-.contact-container > p,     
-.contact-container > div     
-{
-    margin-bottom: 10px;
-}
-
-/* Skills container */
-.skills-container {
     gap: 100px;
 }
 
 .about-description {
-    max-width: 500px;
+    text-align: justify;
+    width: 50%;
+    height: 300px;
 }
 
-/* Portfolio box */
-.portfolio {
+.about-photo {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 24px;
-    border-radius: 25px;
-    background-color: #92a083;
-    max-width: 300px;
-    margin: 10px;
-}
-
-.portfolio > div > p {
-    margin-top: 8px;
-}
-
-/* Portfolio item skills, needs a gap for each skill */
-.portfolio-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 300px;
 }
 
 .selfie {
-    width: 200px;
+    height: 100%;
+    /* width: 250px; */
+    border-radius: 55%;
+    box-sizing: border-box;
+}
+
+/* Portfolio container */
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
     border-radius: 25px;
-    align-items: center;
+    background-color: #727D73;
+    gap: 15px;
+    width: 25%;
+}
+
+.portfolio-description {
+    text-align: left;
+    height: 55%;
+}
+
+.portfolio-skills {
+    text-align: left;
+    height: 35%;
+}
+
+.portfolio-links {
+    text-align: left;
+    height: 10%;
+}
+
+.portfolio-links > a {
+    color: #D0DDD0;
 }
 
 .portfolio-img {
     width: 300px;
 }
 
-/* Sections */
-.about-section,         /* About me section */
-.portfolio-section,     /* Portfolio section */
-.skills-section,        /* Portfolio section */
-.contact-section {      /* Contact section */
-    background-color: #727D73;
-    padding: 32px;
-}
-
-/* Sections */
-.about-section > div > h2,         /* About me section */
-.portfolio-section > div > h2,     /* Portfolio section */
-.skills-section > h2,        /* Portfolio section */
-.contact-section > h2 {      /* Contact section */
-    text-align: center;
-}
-
-
-.skills-section,    /* Skills section */
-.contact-section    /* Contact section */
- {
-    background-color: #AAB99A;
-    color: #F0F0D7;
-}
-.contact-section    /* Contact section */
- {
-    background-color: #727D73;
-}
-
-
-/* Portfolio section */
-.skills-section > h2,   /* Skills section header */
-.contact-section > h2   /* Contact section header */
+/* Skills container */
+.skills-container
 {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Skills container -> skills -> skills items make into a column then add a gap */
+/* Skills container */
 .skills-container > .skills {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    width: 300px;
+    height: 300px;
+    gap: 10px;
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill > p {
+    font-size: 0.8rem;
+}
+
+/* Contact container */
+.contact-container     
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

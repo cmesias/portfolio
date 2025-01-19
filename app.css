@@ -7,6 +7,7 @@
  * F0F0D7   - Text color
  */
 
+    
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +22,10 @@ html {
 body {
     background-color: #727D73;
     color: #F0F0D7;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 a {
@@ -41,178 +46,283 @@ nav {
     font-size: 1.1rem;
 }
 
-.logo {
-    color: #D0DDD0;
-    font-size: 1.5rem;
+img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-main {
-    margin-top: 100px;
+/* Responsive Design */
+/* Between 600px - 999px, this will be in effect */
+@media (max-width: 600px) {
+
+    /* Hide desktop elements */
+    .nav-desktop {
+        display: none;
+    }
+    /* Hide mobile elements */
+
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    nav {
+        border-radius: 10px;
+        border-bottom: black 1px solid;
+        font-weight: 900;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* Section container */
+    section.container {
+        display: block;
+        background-color: #727D73;
+        padding: 32px;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Section titles (h2) */
+    .container > div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .about-photo {
+        display: block;
+        margin : 10px;
+        width: 75%;
+    }
+
+    .selfie {
+        border-radius: 55%;
+        width: 100%;    /* Inherits width from about-photo */
+    }
+
+    .about-description {
+        text-align: justify;
+        width: 100%;
+    }
 }
 
-h3 {
-    font-weight: 1000;
-    margin-bottom: 5px;
-}
+/* 1000px or greater, this will be in effect */
+/* Desktop computer */
+@media (min-width: 601px) {
 
-/* Section headers */
-h2 {
-    font-weight: 900;
-    font-size: 11rem;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #D0DDD0;
-}
+    /* Hide mobile elements */
+    .nav-mobile {
+        display: none;
+    }
+    /* Hide mobile elements */
 
-header {
-    position: sticky;
-    top: 0;
-}
+    .logo {
+        color: #D0DDD0;
+        font-size: 1.5rem;
+    }
 
-/* Section container */
-section.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #727D73;
-    padding: 32px;
-    height: 100vh;
-}
+    main {
+        margin-top: 100px;
+    }
 
-/* Section container (override height for nav section) */
-section.nav {
-    height: 100px;
-}
+    /* Section headers */
+    h2 {
+        font-weight: 900;
+        font-size: 11rem;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #D0DDD0;
+    }
 
-/* Background colors for each section */
-section.portfolio {
-    background-color: #92a083;
-}
+    h3 {
+        font-weight: 1000;
+    }
 
-section.skills {
-    background-color: #727D73;
-}
+    h4 {
+        font-weight: 800;
+    }
 
-section.contact {
-    background-color: #92a083;
-}
+    h3, h4 {
+        margin-bottom: 5px;
+    }
 
-/* Section titles (h2) */
-.container > div {
-    text-align: center;
-    width: 1200px;
-}
+    header {
+        position: sticky;
+        top: 0;
+    }
 
-/* Nav container */
-.nav-container
-{
-    display: flex;
-    justify-content: space-between;
-}
+    /* Section container */
+    section.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #727D73;
+        padding: 32px;
+        height: 100vh;
+    }
 
- /* Nav anchors */
-.nav-container div > a
-{
-    margin-left: 5px;
-}
+    section.about {
+        align-items: stretch;
+    }
 
-/* About container */
-.about-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 100px;
-}
+    /* Section container (override height for nav section) */
+    section.nav {
+        height: 100px;
+    }
 
-.about-description {
-    text-align: justify;
-    width: 50%;
-    height: 300px;
-}
+    /* Background colors for each section */
+    section.portfolio {
+        background-color: #92a083;
+    }
 
-.about-photo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 300px;
-}
+    section.skills {
+        background-color: #727D73;
+    }
 
-.selfie {
-    height: 100%;
-    border-radius: 55%;
-    box-sizing: border-box;
-}
+    section.contact {
+        background-color: #92a083;
+    }
 
-/* Portfolio container */
-.portfolio-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+    /* Section titles (h2) */
+    .container > div {
+        text-align: center;
+        width: 1200px;
+    }
 
-.portfolio-item {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    border-radius: 25px;
-    background-color: #727D73;
-    gap: 15px;
-    width: 25%;
-}
+    /* Nav container */
+    .nav-container
+    {
+        display: flex;
+        justify-content: space-between;
+    }
 
-.portfolio-description {
-    text-align: left;
-    height: 55%;
-}
+    /* Nav anchors */
+    .nav-container div > a
+    {
+        margin-left: 5px;
+    }
 
-.portfolio-skills {
-    text-align: left;
-    height: 35%;
-}
+    /* About container */
+    .about-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+    }
 
-.portfolio-links {
-    text-align: left;
-    height: 10%;
-}
+    .about-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        padding: 10px;
+    }
 
-.portfolio-links > a {
-    color: #D0DDD0;
-}
+    .selfie {
+        border-radius: 55%;
+        width: 60%;
+    }
+    
+    .about-description {
+        text-align: justify;
+        width: 50%;
+        margin-top: 10px;
+    }
 
-.portfolio-img {
-    width: 300px;
-}
+    /* Portfolio container */
+    .portfolio-container {
+        /* display: flex;
+        gap: 20px; */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 
-/* Skills container */
-.skills-container
-{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+    .portfolio-item {
+        width: 25%;
+        background-color: #727D73;
+        padding: 15px;
+        border-radius: 25px;
+        height: 300px; 
+        position: relative; /* Used by .portfolio-links */
 
-/* Skills container */
-.skills-container > .skills {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 300px;
-    gap: 10px;
-}
+        /* This will space out the Header and Skills poortion of a project */
+        /* '.portfolio-links' will not be spaced out because it is absolute to '.portfolio-item' */
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
+    }
 
-.skill {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
+    .portfolio-description p {
+        font-size: 1em;
+    }
 
-.skill > p {
-    font-size: 0.8rem;
-}
+    .portfolio-description {
+        text-align: left;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 15px;
+    }
 
-/* Contact container */
-.contact-container     
-{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    .portfolio-links {
+        text-align: right;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 15px;
+    }
+
+    .portfolio-links > a {
+        color: #D0DDD0;
+    }
+
+    .portfolio-skills {
+        text-align: left;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 15px;
+    }
+
+    .portfolio-skills .skill {
+        /* display: flex;
+        flex-wrap: wrap;
+        gap: 10px; */
+    }
+
+    .portfolio-skills .skill > p {
+        font-size: 0.8rem;
+    }
+
+    .portfolio-img {
+        width: 300px;
+    }
+
+    /* Skills container */
+    .skills-container
+    {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Skills container */
+    .skills-container > .skills {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 300px;
+        gap: 10px;
+    }
+
+    /* Contact container */
+    .contact-container     
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }

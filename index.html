@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Carl Mesias | Front-End Developer</title>
     <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
 </head>
 
-<body>
+<body id="home">
     <!-- Nav bar -->
     <header>
         <nav>
@@ -18,12 +19,20 @@
                     <div class="nav-container">
                         <!-- Home button -->
                         <div>
-                            <a class="logo" href="#about">HOME</a>
+                            <a class="logo" href="#home">HOME</a>
                         </div>
 
                         <!-- Nav bar -->
-                        <div>
-                            <a href="#about">Home</a>
+                        <div class="nav-desktop">
+                            <a href="#home">Home</a>
+                            <!-- <a href="#">About</a> -->
+                            <a href="#portfolio">Portfolio</a>
+                            <a href="#skills">Skills</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+
+                        <!-- Nav bar mobile -->
+                        <div class="nav-mobile">
                             <!-- <a href="#">About</a> -->
                             <a href="#portfolio">Portfolio</a>
                             <a href="#skills">Skills</a>
@@ -39,12 +48,16 @@
     <main>
 
         <!-- About me -->
-        <section class="container about" id="about">
+        <section class="container about">
             <div>
                 <!-- Title -->
                 <h2 class="about-header">Hello World!</h2>
                 <!--  Container with description and paragraph -->
                 <div class="about-container">
+                    <!-- Photo-->
+                    <div class="about-photo">
+                        <img class="selfie" src="selfie.jpg" alt="Carl Mesias">
+                    </div>
                     <!-- About me -->
                     <div class="about-description">
                         <p>My name is <b>Carl Mesias</b>! I am a passionate Software Developer since 2015 with a
@@ -62,10 +75,6 @@
                             on discord, and staying active.
                         </p><br>
                     </div>
-                    <!-- Photo-->
-                    <div class="about-photo">
-                        <img class="selfie" src="selfie.jpg" alt="Carl Mesias">
-                    </div>
                 </div>
             </div>
         </section>
@@ -79,20 +88,28 @@
                 <h2>Portfolio</h2>
                 <div class="portfolio-container">
 
-                    <!-- Project 1 -->
+                    <!-- CuraTrack -->
                     <div class="portfolio-item">
                         <!-- Description -->
                         <div class="portfolio-description">
 
                             <!-- Title-->
-                            <h3><a href="https://cmesias.github.io/curatrack/index.html" target="_blank">CuraTrack</a></h3>
+                            <h3><a href="https://cmesias.github.io/curatrack/index.html/" target="_blank">CuraTrack</a></h3>
+
+                            <!-- Thumbnail -->
+                            <!-- <div>
+                                <img src="selfie.jpg" alt="Thumbnail Icon">
+                            </div> -->
 
                             <!-- Description -->
                             <p>CuraTrack is an efficient healthcare management platform designed to streamline
                                 administrative tasks within a healthcare facility.</p>
                         </div>
-                        <!-- Thumbnail -->
-                        <!--<div><img src="portfolio1.jpg" alt="Portfolio 1" class="portfolio-img"></div>-->
+                        <!-- Links -->
+                        <div class="portfolio-links">
+                            <a href="https://cmesias.github.io/curatrack/index.html/" target="_blank"><b>Website</b></a>
+                            <a href="https://github.com/cmesias/curatrack/" target="_blank"><b>GHub</b></a>
+                        </div>
                         <!-- Skills -->
                         <div class="portfolio-skills">
                             <!-- Title-->
@@ -106,14 +123,40 @@
                                 <p>Firestore Database</p>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Pokémon Viewer -->
+                    <div class="portfolio-item">
+                        <!-- Description -->
+                        <div class="portfolio-description">
+
+                            <!-- Title-->
+                            <h4></h4>
+                            <h3><a href="https://cmesias.github.io/pokemon-viewer/" target="_blank">Pokémon Viewer</a></h3>
+
+                            <!-- Description -->
+                            <p>Retrieve a pokemon by id using The RESTful Pokémon API on <a href="https://pokeapi.co/" target="_blank">https://pokeapi.co/</a>. Returns a few images, name, id and audio of pokemon.</p>
+                        </div>
+                        <!-- Skills -->
+                        <div class="portfolio-skills">
+                            <!-- Title-->
+                            <h4>Skills</h4>
+                            <!-- Technologies -->
+                            <div class="skill">
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>JavaScript</p>
+                                <p>RESTful Pokémon API</p>
+                            </div>
+                        </div>
                         <!-- Links -->
                         <div class="portfolio-links">
-                            <a href="https://cmesias.github.io/curatrack/index.html" target="_blank"><b>Website</b></a>
-                            <a href="https://github.com/cmesias/curatrack" target="_blank"><b>GHub</b></a>
+                            <a href="https://cmesias.github.io/pokemon-viewer/" target="_blank"><b>Website</b></a>
+                            <a href="https://github.com/cmesias/pokemon-viewer/" target="_blank"><b>GHub</b></a>
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
+                    <!-- PDF Merger -->
                     <div class="portfolio-item">
                         <!-- Description -->
                         <div class="portfolio-description">
@@ -125,8 +168,6 @@
                             <p>Merge PDFs together using <b><a
                                 href="https://pdf-lib.js.org/">pdf-lib</a></b>.</p>
                         </div>
-                        <!-- Thumbnail -->
-                        <!--<div><img src="portfolio2.jpg" alt="Portfolio 2" class="portfolio-img"></div>-->
                         <!-- Skills -->
                         <div class="portfolio-skills">
                             <!-- Title-->
@@ -141,11 +182,40 @@
                         <!-- Links -->
                         <div class="portfolio-links">
                             <a href="https://cmesias.github.io/pdf-merger/" target="_blank"><b>Website</b></a>
-                            <a href="https://github.com/cmesias/pdf-merger?tab=readme-ov-file" target="_blank"><b>GHub</b></a>
+                            <a href="https://github.com/cmesias/pdf-merger?tab=readme-ov-file/" target="_blank"><b>GHub</b></a>
                         </div>
                     </div>
 
-                    <!-- Project 3 -->
+                    <!-- CSV Header Editor -->
+                    <div class="portfolio-item">
+                        <!-- Description -->
+                        <div class="portfolio-description">
+
+                            <!-- Title-->
+                            <h3><a href="https://cmesias.github.io/csv-header-editor/" target="_blank">CSV Header Editor</a></h3>
+
+                            <!-- Description -->
+                            <p>This project processes CSV files to transform their headers into a format compatible with Supabase table column naming conventions.</p>
+                        </div>
+                        <!-- Skills -->
+                        <div class="portfolio-skills">
+                            <!-- Title-->
+                            <h4>Skills</h4>
+                            <!-- Technologies -->
+                            <div class="skill">
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                        <!-- Links -->
+                        <div class="portfolio-links">
+                            <a href="https://cmesias.github.io/csv-header-editor/" target="_blank"><b>Website</b></a>
+                            <a href="https://github.com/cmesias/csv-header-editor/" target="_blank"><b>GHub</b></a>
+                        </div>
+                    </div>
+
+                    <!-- Game of Life -->
                     <div class="portfolio-item">
                         <!-- Description -->
                         <div class="portfolio-description">
@@ -157,8 +227,6 @@
                             <!-- Description -->
                             <p>Game of Life created in JavaScript inspired by Conway's 'Game of Life' game.</a></b></p>
                         </div>
-                        <!-- Thumbnail -->
-                        <!--<div><img src="portfolio3.jpg" alt="Portfolio 3" class="portfolio-img"></div>-->
                         <!-- Skills -->
                         <div class="portfolio-skills">
                             <!-- Title-->
@@ -177,7 +245,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 4 -->
+                    <!-- Meme Generator -->
                     <div class="portfolio-item">
                         <!-- Description -->
                         <div class="portfolio-description">
@@ -188,8 +256,6 @@
                             <!-- Description -->
                             <p>Create memes with your favorite images!</p>
                         </div>
-                        <!-- Thumbnail -->
-                        <!--<div><img src="portfolio4.jpg" alt="Portfolio 4" class="portfolio-img"></div>-->
                         <!-- Skills -->
                         <div class="portfolio-skills">
                             <!-- Title-->
@@ -205,40 +271,7 @@
                         <!-- Links -->
                         <div class="portfolio-links">
                             <a href="https://cmesias.github.io/meme-generator/" target="_blank"><b>Website</b></a>
-                            <a href="https://github.com/cmesias/meme-generator" target="_blank"><b>GHub</b></a>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 -->
-                    <div class="portfolio-item">
-                        <!-- Description -->
-                        <div class="portfolio-description">
-
-                            <!-- Title-->
-                            <h4></h4>
-                            <h3><a href="https://cmesias.github.io/pokemon-viewer/" target="_blank">Pokémon Viewer</a></h3>
-
-                            <!-- Description -->
-                            <p>Retrieve a pokemon by id using The RESTful Pokémon API on <a href="https://pokeapi.co/" target="_blank">https://pokeapi.co/</a>. Returns a few images, name, id and audio of pokemon.</p>
-                        </div>
-                        <!-- Thumbnail -->
-                        <!--<div><img src="portfolio5.jpg" alt="Portfolio 5" class="portfolio-img"></div>-->
-                        <!-- Skills -->
-                        <div class="portfolio-skills">
-                            <!-- Title-->
-                            <h3>Skills</h3>
-                            <!-- Technologies -->
-                            <div class="skill">
-                                <p>HTML</p>
-                                <p>CSS</p>
-                                <p>JavaScript</p>
-                                <p>RESTful Pokémon API</p>
-                            </div>
-                        </div>
-                        <!-- Links -->
-                        <div class="portfolio-links">
-                            <a href="https://cmesias.github.io/pokemon-viewer/" target="_blank"><b>Website</b></a>
-                            <a href="https://github.com/cmesias/pokemon-viewer" target="_blank"><b>GHub</b></a>
+                            <a href="https://github.com/cmesias/meme-generator/" target="_blank"><b>GHub</b></a>
                         </div>
                     </div>
                 </div>

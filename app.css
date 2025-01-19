@@ -248,6 +248,21 @@ img {
         /* display: flex;
         flex-direction: column;
         justify-content: space-between; */
+
+        /* Add transition time */
+        transition-duration: 0.2s;
+    }
+
+    .portfolio-item:hover {
+        cursor: pointer;
+        background-color: #5a635a;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .portfolio-item > a {
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
     .portfolio-description p {

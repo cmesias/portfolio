@@ -55,15 +55,10 @@ img {
 /* Between 600px - 999px, this will be in effect */
 @media (max-width: 600px) {
 
-    /* Hide desktop elements */
-    .nav-desktop {
-        display: none;
-    }
-    /* Hide mobile elements */
-
     header {
         position: sticky;
         top: 0;
+        z-index: 1000;
     }
 
     nav {
@@ -84,6 +79,11 @@ img {
         padding: 32px;
         height: 100%;
         width: 100%;
+    }
+
+    /* Section container (override height for nav section) */
+    section.nav {
+        height: 100px;
     }
 
     /* Section titles (h2) */
@@ -112,12 +112,6 @@ img {
 /* 1000px or greater, this will be in effect */
 /* Desktop computer */
 @media (min-width: 601px) {
-
-    /* Hide mobile elements */
-    .nav-mobile {
-        display: none;
-    }
-    /* Hide mobile elements */
 
     .logo {
         color: #D0DDD0;
@@ -151,6 +145,7 @@ img {
     header {
         position: sticky;
         top: 0;
+        z-index: 1000;
     }
 
     /* Section container */

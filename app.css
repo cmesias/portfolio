@@ -51,6 +51,37 @@ img {
     border-radius: 10px;
 }
 
+#interactive-counter {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+#fun-button {
+    color: #F0F0D7;
+    background-color: #555e56;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+#fun-button:hover {
+    transform: scale(1.1);
+}
+
+#fun-button:active {
+    transform: scale(1.2);
+}
+
 /* Responsive Design */
 /* Between 600px - 999px, this will be in effect */
 @media (max-width: 600px) {
@@ -336,3 +367,4 @@ img {
         gap: 20px;
     }
 }
+

@@ -51,6 +51,12 @@ img {
     border-radius: 10px;
 }
 
+/* Default: Hide the separator */
+.separator {
+    display: none;
+}
+
+
 #interactive-counter {
     position: fixed;
     bottom: 20px;
@@ -99,6 +105,25 @@ img {
         font-size: 1.2rem;
     }
 
+    /* Jobs */
+    .job > .job-details {
+        text-align: left;
+        margin-bottom: 0px;
+    }
+    .job > ul {
+        text-align: left;
+        list-style: none;
+        margin-bottom: 16px;
+    }
+
+    /* Section headers */
+    h2 {
+        font-weight: 900;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #D0DDD0;
+    }
+
     p {
         font-size: 1rem;
     }
@@ -114,7 +139,24 @@ img {
 
     /* Section container (override height for nav section) */
     section.nav {
-        height: 100px;
+        height: auto;
+    }
+
+    section.work {
+        background-color: #92a083;
+    }
+
+    /* Background colors for each section */
+    section.portfolio {
+        background-color: #727D73;
+    }
+
+    section.skills {
+        background-color: #92a083;
+    }
+
+    section.contact {
+        background-color: #727D73;
     }
 
     /* Section titles (h2) */
@@ -143,6 +185,9 @@ img {
 /* 1000px or greater, this will be in effect */
 /* Desktop computer */
 @media (min-width: 601px) {
+    .separator {
+        display: inline;
+    }
 
     .logo {
         color: #D0DDD0;
@@ -156,7 +201,7 @@ img {
     /* Section headers */
     h2 {
         font-weight: 900;
-        font-size: 11rem;
+        font-size: 8rem;
         margin-bottom: 10px;
         border-bottom: 1px solid #D0DDD0;
     }
@@ -189,6 +234,11 @@ img {
         height: 100vh;
     }
 
+    /* Section container */
+    section.container.portfolio {
+        height: auto; /* Removes the 100vh height */
+    }
+
     section.about {
         align-items: stretch;
     }
@@ -198,17 +248,21 @@ img {
         height: 100px;
     }
 
-    /* Background colors for each section */
-    section.portfolio {
+    section.work {
         background-color: #92a083;
     }
 
-    section.skills {
+    /* Background colors for each section */
+    section.portfolio {
         background-color: #727D73;
     }
 
-    section.contact {
+    section.skills {
         background-color: #92a083;
+    }
+
+    section.contact {
+        background-color: #727D73;
     }
 
     /* Section titles (h2) */
@@ -256,6 +310,20 @@ img {
         margin-top: 10px;
     }
 
+    /* Jobs */
+    .job {
+        margin-bottom: 16px;
+    }
+    .job > .job-details {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 0px;
+    }
+    .job > ul {
+        text-align: left;
+        list-style: none;
+    }
+
     /* Portfolio container */
     .portfolio-container {
         /* display: flex;
@@ -268,10 +336,10 @@ img {
 
     .portfolio-item {
         width: 25%;
-        background-color: #727D73;
+        background-color: #92a083;
         padding: 15px;
         border-radius: 25px;
-        height: 300px; 
+        height: 350px; 
         position: relative; /* Used by .portfolio-links */
 
         /* This will space out the Header and Skills poortion of a project */

@@ -68,20 +68,21 @@ img {
 
 #fun-button {
     color: #F0F0D7;
-    background-color: #555e56;
+    background-color: rgba(85,94,86, 0.2);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
+    transition-duration: 0.4s;
     margin-bottom: 8px;
     margin-right: 8px;
 }
 
 #fun-button:hover {
     transform: scale(1.1);
+    background-color: rgba(85,94,86, 1);
 }
 
 #fun-button:active {

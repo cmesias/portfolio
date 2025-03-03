@@ -1,25 +1,39 @@
-document.addEventListener("DOMContentLoaded", function() {
 
-    // Get references
-    const button = document.getElementById("fun-button");
-    const audio = new Audio('/sounds/button-click.wav'); 
-    
-    let count = 0; // Initialize the counter
+const saveClicks = (click_count) => {
+  localStorage.setItem("site_clicks", click_count)
+}
 
-    // Button click event
-    button.addEventListener("click", () => {
+const loadClicks = () => {
+  return localStorage.getItem("site_clicks") ? localStorage.getItem("site_clicks") : 0
+}
 
-        count++; // Increment counter
-        button.textContent = `${count}`; // Update the display
-        audio.play();
-        // Disable the button
-        button.disabled = true;
-        button.classList.add("disabled");
 
-        // Re-enable the button after 1 second (1000ms)
-        setTimeout(() => {
-          button.disabled = false;
-          button.classList.remove("disabled");
-        }, 500);
-    });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Get references
+  const funButton = document.getElementById("fun-button");
+  const audio = new Audio('/sounds/button-click.wav');
+
+  // Initialize the counter
+
+  // Load amount of clicks from localStorage
+  funButton.textContent = `${loadClicks()}`;
+
+  // Button click event
+  funButton.addEventListener("click", () => {
+    if (audio.paused === true) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      audio.play();
+    }
+
+    // Increment counter
+    funButton.textContent++;
+
+    // Save amount of clicks in local storage
+    saveClicks(funButton.textContent)
+  });
 });

@@ -234,11 +234,6 @@ img {
         height: 100vh;
     }
 
-    /* Section container */
-    section.container.portfolio {
-        height: auto; /* Removes the 100vh height */
-    }
-
     section.about {
         align-items: stretch;
     }
@@ -248,13 +243,15 @@ img {
         height: 100px;
     }
 
+    /* Background colors for each section */
     section.work {
         background-color: #92a083;
+        height: auto; /* Removes the 100vh height */
     }
 
-    /* Background colors for each section */
     section.portfolio {
         background-color: #727D73;
+        height: auto; /* Removes the 100vh height */
     }
 
     section.skills {

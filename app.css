@@ -129,6 +129,74 @@ img {
         font-size: 1rem;
     }
 
+    /* Portfolio container */
+    .portfolio-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .portfolio-item {
+        background-color: #92a083;
+        border-radius: 25px;
+        position: relative; /* Used by .portfolio-links */
+        width: 100%;
+        height: 350px;
+
+        /* Add transition time */
+        transition-duration: 0.2s;
+    }
+
+    .portfolio-item:hover {
+        cursor: pointer;
+        background-color: #5a635a;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .portfolio-item > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio-description p {
+        font-size: 1em;
+    }
+
+    .portfolio-description {
+        text-align: left;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 15px;
+    }
+
+    .portfolio-skills {
+        text-align: left;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 15px;
+    }
+
+    .portfolio-skills .skill > p {
+        font-size: 0.8rem;
+    }
+
+    .portfolio-links {
+        text-align: right;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 15px;
+    }
+
+    /* Portoflio link colors */
+    .portfolio-links > a {
+        color: #D0DDD0;
+    }
+
     /* Section container */
     section.container {
         display: block;
@@ -340,12 +408,6 @@ img {
         height: 350px; 
         position: relative; /* Used by .portfolio-links */
 
-        /* This will space out the Header and Skills poortion of a project */
-        /* '.portfolio-links' will not be spaced out because it is absolute to '.portfolio-item' */
-        /* display: flex;
-        flex-direction: column;
-        justify-content: space-between; */
-
         /* Add transition time */
         transition-duration: 0.2s;
     }
@@ -394,14 +456,14 @@ img {
         padding: 15px;
     }
 
+    .portfolio-skills .skill > p {
+        font-size: 0.8rem;
+    }
+
     .portfolio-skills .skill {
         /* display: flex;
         flex-wrap: wrap;
         gap: 10px; */
-    }
-
-    .portfolio-skills .skill > p {
-        font-size: 0.8rem;
     }
 
     .portfolio-img {

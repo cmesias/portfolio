@@ -338,11 +338,13 @@ img {
     section.work {
         background-color: #92a083;
         height: auto; /* Removes the 100vh height */
+        padding-top: 5%;
     }
 
     section.portfolio {
         background-color: #727D73;
         height: auto; /* Removes the 100vh height */
+        padding-top: 5%;
     }
 
     section.skills {
